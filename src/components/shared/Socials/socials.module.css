@@ -1,0 +1,16 @@
+.socials {
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  & a {
+    padding: 0.5rem;
+    color: var(--text-gray-light);
+    border: 1px solid #504f4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

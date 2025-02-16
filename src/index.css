@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --bg-dark: #292830;
+  --bg-dark-2: #403f47;
+  --bg-dark-transparent: rgba(41, 40, 48, 0.7);
+
+  --border-color: #504f4f;
+  --border-color-2: #e9e9e9;
+  --border-color-3: #d1d1d1;
+
+  --text-gray-dark: #797979;
+  --text-gray-dark-2: #4f4c56;
+  --text-gray-light: #a8a8a8;
+
+  --font-1: "Merriweather";
+  --font-2: "Lato";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-family: var(--font-2);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--text-gray-light) !important;
+}

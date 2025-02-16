@@ -1,0 +1,107 @@
+.footer {
+  background-color: var(--bg-dark-2);
+
+  & .navWithButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+
+    & > button {
+      display: none;
+    }
+
+    & .navFooter {
+      padding: 25px;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+
+      & li {
+        & a {
+          text-decoration: none;
+          color: var(--white);
+          font-size: 1.2rem;
+          transition: 0.3s all ease-in-out;
+          text-wrap: no-wrap;
+        }
+
+        & a:hover {
+          color: var(--text-gray-light);
+        }
+      }
+    }
+  }
+
+  & .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 60px 0;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-color);
+    max-width: 90%;
+    margin: 0 auto;
+
+    & .socials {
+      margin-top: 30px;
+    }
+  }
+
+  & .created {
+    padding: 25px 0;
+    text-align: center;
+    color: var(--white);
+    & .enterprise {
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .footer {
+    & .navWithButton {
+      border: 1px solid var(--border-color);
+      & > button {
+        display: flex;
+        background-color: transparent;
+        border: 0;
+        font-size: 1.2rem;
+        color: var(--white);
+        padding: 25px 0;
+      }
+      & .navFooter {
+        display: none;
+      }
+
+      & .navFooterMobile {
+        padding-top: 20px;
+        list-style: none;
+
+        & li {
+          & a {
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--white);
+            transition: 0.3s all ease-in-out;
+            font-size: 1.2rem;
+          }
+
+          & a:hover {
+            color: var(--text-gray-light);
+          }
+        }
+      }
+    }
+  }
+}

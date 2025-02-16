@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  & .content {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    margin-bottom: 100px;
+
+    & div {
+      flex: 1 1 45%;
+    }
+
+    & .text {
+      & h3 {
+        font-size: 2rem;
+        color: var(--text-gray-dark-2);
+        margin-bottom: 2rem;
+      }
+
+      & span {
+        display: block;
+        color: var(--text-gray-light);
+        font-size: 1.12rem;
+      }
+
+      & ul {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+
+        & li {
+          line-height: 1.5;
+          font-size: 1.17rem;
+          margin-right: 1.5rem;
+        }
+      }
+    }
+
+    & .img {
+      background-image: linear-gradient(to top, #ffffffa9, #ffffffb7),
+        url("../../assets/imgs/mesquita.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      & img {
+        width: 80%;
+        margin-right: -30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .container {
+    & .content {
+      flex-direction: column;
+
+      & .text {
+        padding: 2rem;
+
+        & ul {
+          & li {
+            margin: 0;
+          }
+        }
+      }
+
+      & .img {
+        justify-content: center;
+        padding: 3rem;
+
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-position-x: -50px;
+
+        & img {
+          width: 400px;
+          max-width: 95%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
