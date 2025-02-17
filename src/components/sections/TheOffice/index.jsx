@@ -1,7 +1,5 @@
 import styles from "./theOffice.module.css";
 
-import building from "../../../assets/imgs/predio.jpeg";
-
 import { Link } from "react-router-dom";
 
 const TheOffice = () => {
@@ -30,7 +28,10 @@ const TheOffice = () => {
         <Link to="/office">Saiba mais</Link>
       </div>
       <Link to="/office" className={styles.img}>
-        <img src={building} alt="Foto do predio de fortaleza" />
+        <img
+          src="https://patiodomluis.com.br/wp-content/uploads/2024/11/Patio-Dom-Luis-Fortaleza-1.jpg"
+          alt="Foto do predio de fortaleza"
+        />
       </Link>
     </section>
   );

@@ -1,41 +1,42 @@
 import styles from "./importantsLinks.module.css";
 
-import { FaBalanceScale } from "react-icons/fa";
-import { FaHandshake } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { SiGoogledocs } from "react-icons/si";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, Autoplay } from "swiper/modules";
+
+import { IoIosLock } from "react-icons/io";
+import { RiMoneyDollarCircleFill, RiSafe3Fill } from "react-icons/ri";
+import { BsGraphUpArrow } from "react-icons/bs";
+
+import { Link } from "react-router-dom";
 
 const ImportantsLinks = () => {
   return (
     <nav className={styles.container}>
       <ul className={styles.desktop}>
         <li>
-          <a href="">
-            <FaBalanceScale />
-            Áreas de Atuação
-          </a>
+          <Link to="/activity/blindagem-patrimonial">
+            <IoIosLock />
+            Blindagem Patrimonial
+          </Link>
         </li>
         <li>
-          <a href="">
-            <FaHandshake />
-            Seja um Parceiro
-          </a>
+          <Link to="/activity/reducao-de-impostos">
+            <RiMoneyDollarCircleFill />
+            Redução de Impostos
+          </Link>
         </li>
         <li>
-          <a href="">
-            <FaInstagram />
-            Acompanhe no Instagram
-          </a>
+          <Link to="/activity/planejamento-tributario">
+            <BsGraphUpArrow />
+            Planejamento Tributário
+          </Link>
         </li>
         <li>
-          <a href="">
-            <SiGoogledocs />
-            Trabalhe conosco
-          </a>
+          <Link to="/activity/holding">
+            <RiSafe3Fill />
+            Holding
+          </Link>
         </li>
       </ul>
 
@@ -51,34 +52,34 @@ const ImportantsLinks = () => {
         >
           <SwiperSlide>
             <li>
-              <a href="">
-                <FaBalanceScale />
-                Áreas de Atuação
-              </a>
+              <Link to="">
+                <IoIosLock />
+                Blindagem Patrimonial
+              </Link>
             </li>
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <a href="">
-                <FaHandshake />
-                Seja um Parceiro
-              </a>
+              <Link to="">
+                <RiMoneyDollarCircleFill />
+                Redução de Impostos
+              </Link>
             </li>
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <a href="">
-                <FaInstagram />
-                Acompanhe no Instagram
-              </a>
+              <Link to="">
+                <BsGraphUpArrow />
+                Planejamento Tributário
+              </Link>
             </li>
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <a href="">
-                <SiGoogledocs />
-                Trabalhe conosco
-              </a>
+              <Link to="">
+                <RiSafe3Fill />
+                Holding
+              </Link>
             </li>
           </SwiperSlide>
         </Swiper>

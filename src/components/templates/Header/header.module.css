@@ -57,14 +57,26 @@
     display: none;
   }
 
-  & .bgImg {
+  & .imgHome,
+  & .imgPath {
     position: relative;
     top: -82px;
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 70vh;
     z-index: -1;
+    opacity: 0.95;
 
     & img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
+  }
+  & .imgPath {
+    height: 45vh;
   }
 }
 
@@ -159,7 +171,8 @@
       }
     }
 
-    & .bgImg {
+    & .imgHome,
+    & .imgPath {
       top: 0;
     }
   }
@@ -173,6 +186,11 @@
 
     .navMobile {
       width: 250px;
+    }
+
+    .imgHome,
+    .imgPath {
+      height: 180px;
     }
   }
 }

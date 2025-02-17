@@ -68,10 +68,10 @@ const Footer = () => {
       </div>
       <div className={styles.contents}>
         <div className={styles.infos}>
-          <p>Av. Washington Soares, 3663, sala 1301, Torre 2 – WSTC</p>
-          <p>Edson Queiroz, Fortaleza – CE</p>
-          <p>CEP 60.811-341</p>
-          <p>(85) 99661-7421 – contato@tuliomagno.com.br</p>
+          <p>Av. Dom Luís, 1200, sala 1902, Torre 1, Pátio Dom Luís</p>
+          <p>Aldeota, Fortaleza – CE</p>
+          <p>CEP 60.160-230</p>
+          <p>(85) 99613-5771 – contato@ewertonbarreto.com.br</p>
         </div>
         <div className={styles.socials}>
           <Socials />

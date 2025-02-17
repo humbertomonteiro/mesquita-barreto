@@ -45,6 +45,7 @@
     position: relative;
     bottom: 130px;
     overflow: hidden;
+    box-shadow: 0 0 8px var(--bg-dark);
 
     & img {
       width: 100%;

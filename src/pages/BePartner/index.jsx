@@ -3,12 +3,28 @@ import Title from "../../components/shared/Title";
 
 import { useState, useEffect } from "react";
 
+import useFormSubmit from "../../hooks/useFormSubmit";
+
 const BePartner = () => {
   const [estados, setEstados] = useState([]);
   const [cidades, setCidades] = useState([]);
   const [estadoSelecionado, setEstadoSelecionado] = useState("");
   const [carregandoEstados, setCarregandoEstados] = useState(true);
   const [carregandoCidades, setCarregandoCidades] = useState(false);
+
+  const { handleSubmit, loading, error, success } = useFormSubmit(
+    "seja_um_parceiro",
+    ["name", "email", "number", "uf", "city", "message"]
+  );
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    uf: "",
+    city: "",
+    message: "",
+  });
 
   useEffect(() => {
     const fetchEstados = async () => {
@@ -27,6 +43,16 @@ const BePartner = () => {
 
     fetchEstados();
   }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit(formData);
+  };
 
   useEffect(() => {
     if (!estadoSelecionado) {
@@ -61,28 +87,32 @@ const BePartner = () => {
         para nós.
       </p>
 
-      <form>
+      <form onSubmit={onSubmit}>
         <label>
           <p>Nome</p>
-          <input type="text" required />
+          <input type="text" name="name" onChange={handleChange} required />
         </label>
 
         <label>
           <p>E-mail</p>
-          <input type="email" required />
+          <input type="email" name="email" onChange={handleChange} required />
         </label>
 
         <label>
           <p>Telefone</p>
-          <input type="number" required />
+          <input type="number" name="number" onChange={handleChange} required />
         </label>
 
         <label>
           <p>UF</p>
           <select
             id="estado"
-            value={estadoSelecionado}
-            onChange={(e) => setEstadoSelecionado(e.target.value)}
+            value={formData.uf} // Atualizado para usar formData.uf
+            name="uf"
+            onChange={(e) => {
+              setEstadoSelecionado(e.target.value); // Atualiza o estado selecionado
+              handleChange(e); // Atualiza o formData
+            }}
             disabled={carregandoEstados}
           >
             <option value="">
@@ -102,7 +132,10 @@ const BePartner = () => {
           <p>Cidade</p>
           <select
             id="cidade"
-            disabled={!estadoSelecionado || carregandoCidades}
+            name="city"
+            value={formData.city} // Certifique-se de que está sincronizado com formData
+            onChange={handleChange}
+            disabled={!formData.uf || carregandoCidades}
           >
             <option value="">
               {carregandoCidades
@@ -119,14 +152,23 @@ const BePartner = () => {
 
         <label>
           <p>Menssagem</p>
-          <textarea type="text" required />
+          <textarea
+            type="text"
+            name="message"
+            onChange={handleChange}
+            required
+          />
         </label>
         <p>
           Ao preencher o formulário você concorda com os termos de nossa
           política de privacidade.
         </p>
-        <button>Enviar menssagem</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Enviando menssagem..." : "Enviar menssagem"}
+        </button>
       </form>
+      {success && <p>Enviado com sucesso!</p>}
+      {error && <p>{error}</p>}
     </div>
   );
 };

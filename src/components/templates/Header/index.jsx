@@ -11,13 +11,18 @@ import Socials from "../../shared/Socials";
 import { Link } from "react-router-dom";
 
 import logo from "../../../assets/imgs/logo-dark.png";
+import office from "../../../assets/imgs/bg-office.jpg";
+
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [showNavMobile, setShowNavMobile] = useState(false);
+  const location = useLocation();
 
   const changeCloseNavMobile = () => {
     setShowNavMobile(false);
   };
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -40,7 +45,7 @@ const Header = () => {
           <Link to="/office">O Escritório</Link>
         </li>
         <li>
-          <Link to="/partner">Sócios</Link>
+          <Link to="/partner">Sobre</Link>
         </li>
         <li>
           <Link to="/activity">Áreas de atuação</Link>
@@ -73,7 +78,7 @@ const Header = () => {
             </li>
             <li>
               <Link onClick={changeCloseNavMobile} to="/partner">
-                Sócios
+                Sobre
               </Link>
             </li>
             <li>
@@ -109,11 +114,10 @@ const Header = () => {
         </div>
       )}
 
-      <div className={styles.bgImg}>
-        <img
-          src="https://tuliomagno.com.br/wp-content/uploads/2022/01/banner-home-1600x600.jpg"
-          alt="Background escritório"
-        />
+      <div
+        className={location.pathname === "/" ? styles.imgHome : styles.imgPath}
+      >
+        <img src={office} alt="Advogado Mesquita" />
       </div>
     </header>
   );

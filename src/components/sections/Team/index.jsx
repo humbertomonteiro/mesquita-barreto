@@ -2,16 +2,18 @@ import styles from "./team.module.css";
 
 import mesquita from "../../../assets/imgs/mesquita.jpg";
 
+import { Link } from "react-router-dom";
+
 const Team = () => {
   return (
     <section className={styles.container}>
-      <a href="">
+      <Link to="/partner">
         <img src={mesquita} alt="Advogado Mesquita" />
-      </a>
+      </Link>
       <div className={styles.info}>
-        <h2>Ewerton Barreto</h2>
+        <h2>Rafael Ewerton Mesquita Barreto</h2>
         <p>contato@ewertonbarreto.com.br</p>
-        <p>OAB/CE 25.354</p>
+        <p>OAB/CE 32.555</p>
       </div>
     </section>
   );

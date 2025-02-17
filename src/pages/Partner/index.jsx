@@ -8,88 +8,41 @@ import BoxCTA from "../../components/shared/BoxCTA";
 const Partner = () => {
   return (
     <div className={styles.container}>
-      <Title text={"Sócios"} />
+      <Title text={"Sobre"} />
 
       <section className={styles.content}>
         <div className={styles.img}>
           <img src={mesquita} alt="Imagem do Advogado Mesquita" />
         </div>
         <div className={styles.text}>
-          <h3>Mesquita Barreto</h3>
+          <h3>Rafael Ewerton Mesquita Barreto</h3>
           <span>contato@mesquita.com.br</span>
-          <span>OAB/CE 24.853</span>
+          <span>OAB/CE 32.555</span>
           <ul>
             <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
+              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR,
+              2015.1;
             </li>
-            <li>
-              – Coordenador Geral do Conselho de Defesa do Policial no Exercício
-              da Função (CDPEF), órgão vinculado à Secretaria de Segurança
-              Pública do Estado do Ceará (SSPDS), desde agosto de 2017; –
-              Procurador da Superintendência de Pesquisa e Estratégia da
-              Segurança Pública (SUPESP), órgão vinculado à Secretaria de
-              Segurança Pública do Estado do Ceará (SSPDS), no período de maio
-              de 2019 a maio de 2020;
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
+            <li>– Advogado inscrito na OAB/CE sob o nº. 32.555;</li>
+            <li>– Especialista em Direito e Processo Tributário;</li>
             <li>
               – Advogado homenageado no Anuário do Direito do Ceará, organizado
-              pelo Grupo O Povo de Comunicação, no ano de 2023, pelo destaque
+              pelo Grupo O Povo de Comunicação, no ano de 2020, pelo destaque
               profissional na Advocacia;
             </li>
             <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
+              – Aprovado no XV Exame da Ordem ainda no 8º semestre de curso;
             </li>
             <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
+              – Especialista na formação em Holding pelo grupo SAVE Academy em
+              Jaraguá do Sul, estado de Santa Catarina, 2022;
             </li>
             <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
+              – Membro do Instituto Cearense de Estudos Tributários – ICET,
+              desde 2013;
             </li>
             <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
-            <li>
-              – Advogado indicado ao Selo Referência Nacional na categoria
-              Advocacia & Justiça pela Agência Nacional de Cultura,
-              Empreendedorismo e Comunicação (ANCEC), no ano de 2020, pelo
-              destaque profissional na Advocacia;
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
-            </li>
-            <li>
-              – Bacharel em Direito pela Universidade de Fortaleza – UNIFOR
-              (2010.2);
+              – Mais de dez Anos de experiência pratica na advocacia tributária.
             </li>
           </ul>
         </div>

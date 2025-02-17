@@ -3,70 +3,33 @@ import styles from "./activity.module.css";
 
 import BoxCTA from "../../components/shared/BoxCTA";
 
-import { FaFileContract } from "react-icons/fa";
+import { IoIosLock } from "react-icons/io";
+import { RiMoneyDollarCircleFill, RiSafe3Fill } from "react-icons/ri";
+import { BsGraphUpArrow } from "react-icons/bs";
+
 import { Link } from "react-router-dom";
 
 const Activity = () => {
   const areasActivity = [
     {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
+      title: "Blindagem Patrimonial",
+      icon: <IoIosLock />,
+      path: "/activity/blindagem-patrimonial",
     },
     {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
+      title: " Redução de Impostos",
+      icon: <RiMoneyDollarCircleFill />,
+      path: "/activity/reducao-de-impostos",
     },
     {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
+      title: "Planejamento Tributário",
+      icon: <BsGraphUpArrow />,
+      path: "/activity/planejamento-tributario",
     },
     {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
-    },
-    {
-      title: "Licitações e Contratos Administrativos",
-      icon: <FaFileContract />,
-      path: "/activity/licitacoes",
+      title: "Holding",
+      icon: <RiSafe3Fill />,
+      path: "/activity/holding",
     },
   ];
 
