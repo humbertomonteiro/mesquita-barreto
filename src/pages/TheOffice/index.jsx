@@ -1,4 +1,5 @@
 import BoxCTA from "../../components/shared/BoxCTA";
+import ImagesTribunal from "../../components/shared/ImagesTribunal";
 import Title from "../../components/shared/Title";
 import styles from "./theOffice.module.css";
 
@@ -29,6 +30,8 @@ const TheOffice = () => {
           para oferecer o máximo de conforto e comodidade aos nossos clientes.
         </p>
       </section>
+
+      <ImagesTribunal />
 
       <BoxCTA />
     </div>

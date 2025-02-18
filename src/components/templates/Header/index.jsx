@@ -9,6 +9,7 @@ import { IoClose } from "react-icons/io5";
 import Socials from "../../shared/Socials";
 
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../../../assets/imgs/logo-dark.png";
 import office from "../../../assets/imgs/bg-office.jpg";
@@ -17,10 +18,21 @@ import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [showNavMobile, setShowNavMobile] = useState(false);
+  const [showInputSearch, setShowInputSearch] = useState(false);
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
   const location = useLocation();
 
   const changeCloseNavMobile = () => {
     setShowNavMobile(false);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search.trim()) {
+      navigate(`/articles?search=${encodeURIComponent(search)}`);
+      setShowInputSearch(false);
+    }
   };
 
   return (
@@ -31,7 +43,7 @@ const Header = () => {
         </Link>
 
         <div className={styles.buttonsLogo}>
-          <button>
+          <button onClick={() => setShowInputSearch(true)}>
             <IoIosSearch />
           </button>
           <button onClick={() => setShowNavMobile(true)}>
@@ -57,7 +69,7 @@ const Header = () => {
           <Link to="/contacts">Contato</Link>
         </li>
         <li>
-          <button>
+          <button onClick={() => setShowInputSearch(true)}>
             <IoIosSearch />
           </button>
         </li>
@@ -119,6 +131,25 @@ const Header = () => {
       >
         <img src={office} alt="Advogado Mesquita" />
       </div>
+
+      {showInputSearch && (
+        <div className={styles.boxSearch}>
+          <form onSubmit={handleSearch}>
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Buscar artigos..."
+            />
+            <button type="submit">
+              <IoIosSearch />
+            </button>
+          </form>
+          <button o onClick={() => setShowInputSearch(false)}>
+            <IoClose />
+          </button>
+        </div>
+      )}
     </header>
   );
 };

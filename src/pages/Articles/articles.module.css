@@ -1,0 +1,40 @@
+.container {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  & .articles {
+    width: 850px;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    & h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1.3rem;
+    }
+
+    & p {
+      font-size: 1.12rem;
+      line-height: 1.5;
+      margin-bottom: 1.3rem;
+    }
+
+    & a {
+      font-size: 1.12rem;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      width: fit-content;
+      border: 1px solid var(--black);
+      color: var(--black);
+      transition: 0.3s all ease-in-out;
+    }
+
+    & a:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}
