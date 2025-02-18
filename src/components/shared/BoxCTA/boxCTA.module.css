@@ -99,6 +99,9 @@
 }
 
 @media (max-width: 550px) {
+  .container .content {
+    max-width: 90%;
+  }
   .container .content .contentInfo .text h2 {
     font-size: 1.3rem;
   }

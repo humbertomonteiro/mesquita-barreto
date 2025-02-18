@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--bg-dark-2);
+  background-color: var(--bg-dark);
 
   & .navWithButton {
     display: flex;
@@ -15,7 +15,7 @@
     & .navFooter {
       padding: 25px;
       display: flex;
-      gap: 1rem;
+      gap: 4rem;
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: center;
@@ -25,7 +25,7 @@
         & a {
           text-decoration: none;
           color: var(--white);
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           transition: 0.3s all ease-in-out;
           text-wrap: no-wrap;
         }
@@ -46,8 +46,7 @@
     color: var(--white);
     padding: 60px 0;
     line-height: 1.5;
-    font-size: 1.1rem;
-    border-bottom: 1px solid var(--border-color);
+    font-size: 1.15rem;
     max-width: 90%;
     margin: 0 auto;
 
@@ -57,11 +56,16 @@
   }
 
   & .created {
+    border-top: 1px solid var(--border-color);
     padding: 25px 0;
+    font-size: 1.12rem;
     text-align: center;
-    color: var(--white);
-    & .enterprise {
+    color: var(--text-gray-dark);
+
+    & a {
       font-weight: bold;
+      text-decoration: none;
+      color: var(--text-gray-dark);
     }
   }
 }
@@ -76,15 +80,19 @@
         border: 0;
         font-size: 1.2rem;
         color: var(--white);
-        padding: 25px 0;
+        padding: 20px 0;
+        width: 100%;
+        transition: 0.3s all ease-in-out;
       }
       & .navFooter {
         display: none;
       }
 
       & .navFooterMobile {
+        width: 100%;
         padding-top: 20px;
         list-style: none;
+        border-top: 1px solid var(--border-color);
 
         & li {
           & a {
@@ -102,6 +110,10 @@
           }
         }
       }
+    }
+
+    & .navWithButton button:hover {
+      background-color: var(--bg-dark-2);
     }
   }
 }

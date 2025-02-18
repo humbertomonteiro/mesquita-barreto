@@ -47,3 +47,9 @@
     color: var(--text-gray-light);
   }
 }
+
+@media (max-width: 480px) {
+  .container .info h2 {
+    font-size: 1.7rem;
+  }
+}

@@ -103,6 +103,7 @@
           border: 0;
           font-size: 2.2rem;
           padding: 0.2rem;
+          color: var(--black);
         }
       }
     }
@@ -125,6 +126,7 @@
 
       & button {
         background-color: transparent;
+        color: var(--black);
         border: 0;
         font-size: 2.2rem;
         display: flex;
@@ -174,6 +176,7 @@
     & .imgHome,
     & .imgPath {
       top: 0;
+      height: 220px;
     }
   }
 }
@@ -190,7 +193,7 @@
 
     .imgHome,
     .imgPath {
-      height: 180px;
+      height: 170px;
     }
   }
 }

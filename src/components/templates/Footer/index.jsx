@@ -10,6 +10,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const [showMenuFooter, setShowMenuFooter] = useState(false);
 
+  const topPage = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setShowMenuFooter(false);
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.navWithButton}>
@@ -18,50 +23,78 @@ const Footer = () => {
         </button>
         <ul className={styles.navFooter}>
           <li>
-            <Link to="/office">O Escritório</Link>
+            <Link onClick={topPage} to="/office">
+              O Escritório
+            </Link>
           </li>
           <li>
-            <Link to="/partner">Sócios</Link>
+            <Link onClick={topPage} to="/partner">
+              Sócios
+            </Link>
           </li>
           <li>
-            <Link to="activity">Áreas de atuação</Link>
+            <Link onClick={topPage} to="activity">
+              Áreas de atuação
+            </Link>
           </li>
           <li>
-            <Link to="/articles">Artigos</Link>
+            <Link onClick={topPage} to="/articles">
+              Artigos
+            </Link>
           </li>
           <li>
-            <Link to="/contacts">Contato</Link>
+            <Link onClick={topPage} to="/contacts">
+              Contato
+            </Link>
           </li>
           <li>
-            <Link to="/work-us">Trabalhe Conosco</Link>
+            <Link onClick={topPage} to="/work-us">
+              Trabalhe Conosco
+            </Link>
           </li>
           <li>
-            <Link to="/be-partner">Seja um Parceiro</Link>
+            <Link onClick={topPage} to="/be-partner">
+              Seja um Parceiro
+            </Link>
           </li>
         </ul>
 
         {showMenuFooter && (
           <ul className={styles.navFooterMobile}>
             <li>
-              <Link to="office">O Escritório</Link>
+              <Link onClick={topPage} to="office">
+                O Escritório
+              </Link>
             </li>
             <li>
-              <Link to="/partner">Sócios</Link>
+              <Link onClick={topPage} to="/partner">
+                Sócios
+              </Link>
             </li>
             <li>
-              <Link to="/activity">Áreas de atuação</Link>
+              <Link onClick={topPage} to="/activity">
+                Áreas de atuação
+              </Link>
             </li>
             <li>
-              <Link to="/articles">Artigos</Link>
+              <Link onClick={topPage} to="/articles">
+                Artigos
+              </Link>
             </li>
             <li>
-              <Link to="/contacts">Contato</Link>
+              <Link onClick={topPage} to="/contacts">
+                Contato
+              </Link>
             </li>
             <li>
-              <Link to="/work-us">Trabalhe Conosco</Link>
+              <Link onClick={topPage} to="/work-us">
+                Trabalhe Conosco
+              </Link>
             </li>
             <li>
-              <Link to="/be-partner">Seja um Parceiro</Link>
+              <Link onClick={topPage} to="/be-partner">
+                Seja um Parceiro
+              </Link>
             </li>
           </ul>
         )}
@@ -78,7 +111,10 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.created}>
-        Criado por <strong>&lt; Hum Dev /&gt;</strong>
+        Criado por{" "}
+        <Link to="https://portfolio-three-bay-73.vercel.app/" target="_blank">
+          &lt; Hum Dev /&gt;
+        </Link>
       </div>
     </footer>
   );
