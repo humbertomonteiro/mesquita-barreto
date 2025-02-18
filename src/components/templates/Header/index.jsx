@@ -140,6 +140,7 @@ const Header = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Buscar artigos..."
+              required
             />
             <button type="submit">
               <IoIosSearch />

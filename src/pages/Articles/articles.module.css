@@ -37,4 +37,23 @@
       color: var(--white);
     }
   }
+
+  & .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 40px;
+
+    & button {
+      padding: 0.3rem 0.5rem;
+      background-color: var(--text-gray-light);
+      border: 0;
+      font-size: 1.12rem;
+    }
+
+    & .activePage {
+      background-color: var(--bg-dark);
+      color: var(--white);
+    }
+  }
 }

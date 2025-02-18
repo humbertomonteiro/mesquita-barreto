@@ -2,13 +2,12 @@ import { useState } from "react";
 import styles from "./imagesTribunal.module.css";
 import { LuZoomIn, LuX } from "react-icons/lu";
 import { MdOutlineArrowRight, MdOutlineArrowLeft } from "react-icons/md";
+import img1 from "../../../assets/imgs/bg-office.jpg";
+import img2 from "../../../assets/imgs/office2.png";
+import img3 from "../../../assets/imgs/office3.png";
+import img4 from "../../../assets/imgs/office4.png";
 
-const images = [
-  "https://tuliomagno.com.br/wp-content/uploads/2022/01/FOTO-20.jpeg",
-  "https://tuliomagno.com.br/wp-content/uploads/2022/01/FOTO-03.jpeg",
-  "https://tuliomagno.com.br/wp-content/uploads/2023/09/foto-4.jpeg",
-  "https://tuliomagno.com.br/wp-content/uploads/2023/09/foto-5.jpeg",
-];
+const images = [img1, img2, img3, img4];
 
 const ImagesTribunal = () => {
   const [selectedImage, setSelectedImage] = useState(null);
