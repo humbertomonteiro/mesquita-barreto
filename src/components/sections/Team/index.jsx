@@ -5,9 +5,13 @@ import mesquita from "../../../assets/imgs/mesquita.jpg";
 import { Link } from "react-router-dom";
 
 const Team = () => {
+  const topPage = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section className={styles.container}>
-      <Link to="/partner">
+      <Link onClick={topPage} to="/partner">
         <img src={mesquita} alt="Advogado Mesquita" />
       </Link>
       <div className={styles.info}>

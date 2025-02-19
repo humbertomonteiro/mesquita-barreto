@@ -11,29 +11,32 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const ImportantsLinks = () => {
+  const topPage = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <nav className={styles.container}>
       <ul className={styles.desktop}>
         <li>
-          <Link to="/activity/blindagem-patrimonial">
+          <Link onClick={topPage} to="/activity/blindagem-patrimonial">
             <IoIosLock />
             Blindagem Patrimonial
           </Link>
         </li>
         <li>
-          <Link to="/activity/reducao-de-impostos">
+          <Link onClick={topPage} to="/activity/reducao-de-impostos">
             <RiMoneyDollarCircleFill />
             Redução de Impostos
           </Link>
         </li>
         <li>
-          <Link to="/activity/planejamento-tributario">
+          <Link onClick={topPage} to="/activity/planejamento-tributario">
             <BsGraphUpArrow />
             Planejamento Tributário
           </Link>
         </li>
         <li>
-          <Link to="/activity/holding">
+          <Link onClick={topPage} to="/activity/holding">
             <RiSafe3Fill />
             Holding
           </Link>
@@ -52,7 +55,7 @@ const ImportantsLinks = () => {
         >
           <SwiperSlide>
             <li>
-              <Link to="/activity/blindagem-patrimonial">
+              <Link onClick={topPage} to="/activity/blindagem-patrimonial">
                 <IoIosLock />
                 Blindagem Patrimonial
               </Link>
@@ -60,7 +63,7 @@ const ImportantsLinks = () => {
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <Link to="/activity/reducao-de-impostos">
+              <Link onClick={topPage} to="/activity/reducao-de-impostos">
                 <RiMoneyDollarCircleFill />
                 Redução de Impostos
               </Link>
@@ -68,7 +71,7 @@ const ImportantsLinks = () => {
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <Link to="/activity/planejamento-tributario">
+              <Link onClick={topPage} to="/activity/planejamento-tributario">
                 <BsGraphUpArrow />
                 Planejamento Tributário
               </Link>
@@ -76,7 +79,7 @@ const ImportantsLinks = () => {
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <Link to="/activity/holding">
+              <Link onClick={topPage} to="/activity/holding">
                 <RiSafe3Fill />
                 Holding
               </Link>

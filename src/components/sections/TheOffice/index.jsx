@@ -3,6 +3,9 @@ import styles from "./theOffice.module.css";
 import { Link } from "react-router-dom";
 
 const TheOffice = () => {
+  const topPage = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -25,9 +28,11 @@ const TheOffice = () => {
         </p>
         <p>Com o cliente, em qualquer lugar, em qualquer momento, sempre.</p>
 
-        <Link to="/office">Saiba mais</Link>
+        <Link onClick={topPage} to="/office">
+          Saiba mais
+        </Link>
       </div>
-      <Link to="/office" className={styles.img}>
+      <Link nClick={topPage} to="/office" className={styles.img}>
         <img
           src="https://patiodomluis.com.br/wp-content/uploads/2024/11/Patio-Dom-Luis-Fortaleza-1.jpg"
           alt="Foto do predio de fortaleza"

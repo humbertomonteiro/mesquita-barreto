@@ -9,10 +9,11 @@
   margin-bottom: 100px;
 
   & div {
-    flex: 1 1 23%;
-    max-width: 300px;
-    height: 230px;
+    max-width: 500px;
+    height: 210px;
     position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
 
     & svg {
       position: absolute;
@@ -95,14 +96,37 @@
   opacity: 1;
 }
 
+@media (max-width: 890px) {
+  .container {
+    & div {
+      height: 270px;
+      max-width: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .container {
+    & div {
+      height: 250px;
+      max-width: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
 @media (max-width: 550px) {
   .container {
     max-width: 90%;
     display: grid;
-    grid-template-columns: 48% 48%;
+    grid-template-columns: 49% 49%;
+    gap: 0.5rem;
 
     & div {
-      height: 150px;
+      height: 130px;
+      max-width: 100%;
+      overflow: hidden;
     }
   }
 }
