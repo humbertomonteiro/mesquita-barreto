@@ -40,8 +40,8 @@ const Activity = () => {
         Atuamos em diversas áreas do direito com responsabilidade e compromisso.
       </p>
       <section className={styles.boxes}>
-        {areasActivity.map((item) => (
-          <div className={styles.box}>
+        {areasActivity.map((item, index) => (
+          <div key={index} className={styles.box}>
             {item.icon}
             <h3>{item.title}</h3>
             <Link to={item.path}>Saiba mais</Link>

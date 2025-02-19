@@ -17,8 +17,7 @@ const BoxCTA = () => {
             <p>Fale com nossa equipe e nos informe como podemos te ajudar.</p>
             <Link
               target="_blank"
-              to="https://wa.me/558596135771?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20jurídica.%20Poderia%20me%20ajudar%3F
-"
+              to="https://api.whatsapp.com/send?phone=5585996135771&text=Ola%20vim%20do%20Site"
             >
               Fale Conosco
             </Link>

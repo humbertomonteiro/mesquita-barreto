@@ -45,6 +45,10 @@ img {
   width: 100%;
 }
 
+input {
+  border-radius: 0;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--text-gray-light) !important;

@@ -52,7 +52,7 @@ const ImportantsLinks = () => {
         >
           <SwiperSlide>
             <li>
-              <Link to="">
+              <Link to="/activity/blindagem-patrimonial">
                 <IoIosLock />
                 Blindagem Patrimonial
               </Link>
@@ -60,7 +60,7 @@ const ImportantsLinks = () => {
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <Link to="">
+              <Link to="/activity/reducao-de-impostos">
                 <RiMoneyDollarCircleFill />
                 Redução de Impostos
               </Link>
@@ -68,7 +68,7 @@ const ImportantsLinks = () => {
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <Link to="">
+              <Link to="/activity/planejamento-tributario">
                 <BsGraphUpArrow />
                 Planejamento Tributário
               </Link>
@@ -76,7 +76,7 @@ const ImportantsLinks = () => {
           </SwiperSlide>
           <SwiperSlide>
             <li>
-              <Link to="">
+              <Link to="/activity/holding">
                 <RiSafe3Fill />
                 Holding
               </Link>

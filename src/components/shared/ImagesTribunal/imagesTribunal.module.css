@@ -95,21 +95,6 @@
   opacity: 1;
 }
 
-/* @media (max-width: 1025px) {
-  .container {
-    & img {
-      flex: 1 1 32%;
-    }
-  }
-} */
-
-@media (max-width: 865px) {
-  .container {
-    & div {
-    }
-  }
-}
-
 @media (max-width: 550px) {
   .container {
     max-width: 90%;
