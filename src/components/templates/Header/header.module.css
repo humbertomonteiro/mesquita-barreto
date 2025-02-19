@@ -15,6 +15,11 @@
       align-items: center;
       & img {
         width: 130px;
+        transition: opacity 0.3s all;
+      }
+
+      & img:hover {
+        opacity: 0.9;
       }
     }
 
@@ -103,7 +108,7 @@
 
       & input {
         background-color: #ffffffc7;
-        color: var(--text-gray-light);
+        color: var(--text-gray-dark);
         height: 50px;
         padding: 1rem;
         font-size: 1.12rem;
@@ -119,7 +124,7 @@
         border-top: 2px solid var(--white);
         border-bottom: 2px solid var(--white);
         font-size: 1.5rem;
-        color: var(--text-gray-light);
+        color: var(--text-gray-dark);
       }
     }
 
@@ -130,7 +135,7 @@
       border: 2px solid var(--white);
       border-left: 0;
       font-size: 1.5rem;
-      color: var(--text-gray-light);
+      color: var(--text-gray-dark);
     }
   }
 }

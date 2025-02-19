@@ -49,6 +49,7 @@
     font-size: 1.15rem;
     max-width: 90%;
     margin: 0 auto;
+    line-height: 1.6;
 
     & .socials {
       margin-top: 30px;

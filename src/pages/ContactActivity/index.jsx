@@ -44,9 +44,23 @@ const ContactActivity = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const redirectToWhatsApp = (name, subject, message) => {
+    const phoneNumber = "5585996135771";
+
+    const text = `Olá! Vim do site. \n\nMe chamo *${name}*. \n\nQuero falar sobre: *${subject}*. \n\nEste é o resumo do meu caso: \n\n*${message}*.`;
+
+    const encodedText = encodeURIComponent(text);
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+    // window.location.href = whatsappUrl;
+    window.open(whatsappUrl, "_blank");
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
     handleSubmit(formData);
+    redirectToWhatsApp(formData.name, formData.subject, formData.message);
   };
 
   return (

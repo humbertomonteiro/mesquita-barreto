@@ -45,7 +45,7 @@
     margin-bottom: 40px;
 
     & button {
-      padding: 0.3rem 0.5rem;
+      padding: 0.3rem 0.7rem;
       background-color: var(--text-gray-light);
       border: 0;
       font-size: 1.12rem;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwKligUkExj3yW0mo0RoTRcj6YDJQ2s4f5rGwaFsiiYCj3XPuWMZtON5-uv1Fhyie3xSQ/exec";
+  "https://script.google.com/macros/s/AKfycby2RT3TTn8Ekbm9pLXNBBr7n7BrKKUdNTXACuqnKu4fhPElSTIKE1OdAD-XotCHhdfI/exec";
 
 const useFormSubmit = (sheetName, fields) => {
   const [loading, setLoading] = useState(false);
