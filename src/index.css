@@ -45,7 +45,8 @@ img {
   width: 100%;
 }
 
-input {
+input,
+select {
   border-radius: 0;
 }
 

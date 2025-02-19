@@ -32,6 +32,7 @@ const Header = () => {
     if (search.trim()) {
       navigate(`/articles?search=${encodeURIComponent(search)}`);
       setShowInputSearch(false);
+      setSearch("");
     }
   };
 
