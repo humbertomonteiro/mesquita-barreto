@@ -4,7 +4,7 @@ import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 
 import Title from "../../components/shared/Title";
 import BoxCTA from "../../components/shared/BoxCTA";
-import { articles } from "../../data/constants";
+import { articles } from "../../data/constants/articles";
 
 import { IoIosSearch } from "react-icons/io";
 

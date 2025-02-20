@@ -1,6 +1,6 @@
 import styles from "./article.module.css";
 
-import { articles } from "../../data/constants";
+import { articles } from "../../data/constants/articles";
 
 import { useParams } from "react-router-dom";
 import Articles from "../Articles";

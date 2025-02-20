@@ -4,11 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, Autoplay } from "swiper/modules";
 
-import { IoIosLock } from "react-icons/io";
-import { RiMoneyDollarCircleFill, RiSafe3Fill } from "react-icons/ri";
-import { BsGraphUpArrow } from "react-icons/bs";
+import { AiFillInstagram } from "react-icons/ai";
 
 import { Link } from "react-router-dom";
+
+import { areasActivity } from "../../../data/constants/activitys";
 
 const ImportantsLinks = () => {
   const topPage = () => {
@@ -16,35 +16,24 @@ const ImportantsLinks = () => {
   };
   return (
     <nav className={styles.container}>
-      <ul className={styles.desktop}>
-        <li>
-          <Link onClick={topPage} to="/activity/blindagem-patrimonial">
-            <IoIosLock />
-            Blindagem Patrimonial
-          </Link>
-        </li>
-        <li>
-          <Link onClick={topPage} to="/activity/reducao-de-impostos">
-            <RiMoneyDollarCircleFill />
-            Redução de Impostos
-          </Link>
-        </li>
-        <li>
-          <Link onClick={topPage} to="/activity/planejamento-tributario">
-            <BsGraphUpArrow />
-            Planejamento Tributário
-          </Link>
-        </li>
-        <li>
-          <Link onClick={topPage} to="/activity/holding">
-            <RiSafe3Fill />
-            Holding
-          </Link>
-        </li>
-      </ul>
-
       <ul className={styles.mobile}>
         <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          }}
           navigation={true}
           modules={[Navigation, Autoplay]}
           autoplay={{
@@ -55,36 +44,25 @@ const ImportantsLinks = () => {
         >
           <SwiperSlide>
             <li>
-              <Link onClick={topPage} to="/activity/blindagem-patrimonial">
-                <IoIosLock />
-                Blindagem Patrimonial
+              <Link
+                to="https://www.instagram.com/rafaewertonbarreto?igsh=eXZpZWNld3doMW0%3D"
+                target="_blank"
+              >
+                <AiFillInstagram />
+                Instagram
               </Link>
             </li>
           </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <Link onClick={topPage} to="/activity/reducao-de-impostos">
-                <RiMoneyDollarCircleFill />
-                Redução de Impostos
-              </Link>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <Link onClick={topPage} to="/activity/planejamento-tributario">
-                <BsGraphUpArrow />
-                Planejamento Tributário
-              </Link>
-            </li>
-          </SwiperSlide>
-          <SwiperSlide>
-            <li>
-              <Link onClick={topPage} to="/activity/holding">
-                <RiSafe3Fill />
-                Holding
-              </Link>
-            </li>
-          </SwiperSlide>
+          {areasActivity.map((activity) => (
+            <SwiperSlide>
+              <li key={activity.path}>
+                <Link onClick={topPage} to={activity.path}>
+                  {activity.icon}
+                  {activity.title}
+                </Link>
+              </li>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </ul>
     </nav>
