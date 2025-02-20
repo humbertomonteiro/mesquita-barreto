@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: var(--border-1);
 
     & > button {
       display: none;
@@ -24,7 +24,7 @@
       & li {
         & a {
           text-decoration: none;
-          color: var(--white);
+          color: var(--text-2);
           font-size: 1.3rem;
           transition: 0.3s all ease-in-out;
           text-wrap: no-wrap;
@@ -35,6 +35,10 @@
         }
       }
     }
+
+    & .navFooterMobile {
+      display: none;
+    }
   }
 
   & .contents {
@@ -43,7 +47,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--white);
+    color: var(--text-2);
     padding: 60px 0;
     line-height: 1.5;
     font-size: 1.15rem;
@@ -57,7 +61,7 @@
   }
 
   & .created {
-    border-top: 1px solid var(--border-color);
+    border-top: var(--border-1);
     padding: 25px 0;
     font-size: 1.12rem;
     text-align: center;
@@ -74,13 +78,14 @@
 @media (max-width: 880px) {
   .footer {
     & .navWithButton {
-      border: 1px solid var(--border-color);
+      border-top: var(--border-2);
+      border-bottom: var(--border-2);
       & > button {
         display: flex;
         background-color: transparent;
         border: 0;
         font-size: 1.2rem;
-        color: var(--white);
+        color: var(--text-2);
         padding: 20px 0;
         width: 100%;
         transition: 0.3s all ease-in-out;
@@ -90,10 +95,12 @@
       }
 
       & .navFooterMobile {
+        display: flex;
+        flex-direction: column;
         width: 100%;
         padding-top: 20px;
         list-style: none;
-        border-top: 1px solid var(--border-color);
+        border-top: var(--border-1);
 
         & li {
           & a {
@@ -101,7 +108,7 @@
             display: block;
             margin-bottom: 20px;
             text-align: center;
-            color: var(--white);
+            color: var(--text-2);
             transition: 0.3s all ease-in-out;
             font-size: 1.2rem;
           }
@@ -114,7 +121,7 @@
     }
 
     & .navWithButton button:hover {
-      background-color: var(--bg-dark-2);
+      background-color: var(--bg-primary);
     }
   }
 }

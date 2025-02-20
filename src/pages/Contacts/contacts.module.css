@@ -29,26 +29,6 @@
         }
       }
     }
-
-    & a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      height: 50px;
-      background-color: var(--bg-dark-2);
-      padding: 0 30px;
-      width: fit-content;
-      border: 1px solid var(--bg-dark-transparent);
-      color: var(--text-white-2);
-      font-size: 1.12rem;
-      transition: 0.3s all ease-in-out;
-    }
-
-    & a:hover {
-      background-color: var(--black);
-      color: var(--white);
-    }
   }
 
   & form {
@@ -83,24 +63,6 @@
     & label:nth-child(4),
     & p:nth-child(5) {
       grid-column: span 2;
-    }
-
-    & button {
-      height: 50px;
-      padding: 0 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--black);
-      color: var(--white);
-      font-size: 1.12rem;
-      width: fit-content;
-      border: 0;
-      transition: 0.3s all ease-in-out;
-    }
-
-    & button:hover {
-      background-color: var(--bg-dark);
     }
   }
 

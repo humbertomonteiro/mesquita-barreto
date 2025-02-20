@@ -112,7 +112,7 @@ const WorkUs = () => {
           Ao preencher o formulário você concorda com os termos de nossa
           política de privacidade.
         </p>
-        <button type="submit" disabled={loading}>
+        <button data-button="1" type="submit" disabled={loading}>
           {loading ? "Enviando mensagem..." : "Enviar mensagem"}
         </button>
       </form>

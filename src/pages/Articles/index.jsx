@@ -60,7 +60,9 @@ const Articles = ({ title = "Artigos" }) => {
               <div key={article.id} className={styles.articles}>
                 <h3>{article.title}</h3>
                 <p>{article.description}</p>
-                <Link to={`/articles/${article.id}`}>Saiba mais</Link>
+                <Link data-button="3" to={`/articles/${article.id}`}>
+                  Saiba mais
+                </Link>
               </div>
             ))
           ) : (

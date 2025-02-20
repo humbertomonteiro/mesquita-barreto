@@ -23,7 +23,7 @@
       flex-direction: column;
       gap: 20px;
       align-items: center;
-      border: 1px solid var(--border-color);
+      border: var(--border-2);
       padding: 40px;
       transition: 0.3s all ease-in-out;
 
@@ -36,24 +36,10 @@
         font-size: 1.5rem;
         text-align: center;
       }
-
-      & a {
-        text-decoration: none;
-        font-size: 1.12rem;
-        padding: 10px 20px;
-        border: 1px solid var(--border-color);
-        color: var(--white);
-        transition: 0.3s all ease-in-out;
-      }
-
-      & a:hover {
-        background-color: var(--black);
-        color: var(--white);
-      }
     }
 
     & .box:hover {
-      border-color: var(--border-color-2);
+      border: var(--border-3);
     }
   }
 }

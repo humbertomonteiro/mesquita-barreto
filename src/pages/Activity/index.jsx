@@ -59,7 +59,9 @@ const Activity = () => {
           <div key={index} className={styles.box}>
             {item.icon}
             <h3>{item.title}</h3>
-            <Link to={item.path}>Saiba mais</Link>
+            <Link data-button="3" to={item.path}>
+              Saiba mais
+            </Link>
           </div>
         ))}
       </section>

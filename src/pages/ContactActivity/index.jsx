@@ -100,7 +100,7 @@ const ContactActivity = () => {
           Ao preencher o formulário você concorda com os termos de nossa
           política de privacidade.
         </p>
-        <button type="submit" disabled={loading}>
+        <button data-button="1" type="submit" disabled={loading}>
           {loading ? "Enviando menssagem..." : "Enviar menssagem"}
         </button>
       </form>

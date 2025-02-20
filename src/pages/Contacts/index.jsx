@@ -44,9 +44,15 @@ const Contacts = () => {
           <div className={styles.boxInfo}>
             <h3>E-mail e Telefone</h3>
             <p>Telefone: (85) 9 99613-5771</p>
-            <p>E-mail: contato@ewertonbarreto.com.br</p>
+            <p>E-mail: mesquitabarreto33@gmail.com</p>
           </div>
-          <Link to="/work-us">Trabalhe conosco</Link>
+          <Link
+            data-button="3"
+            to="/work-us"
+            style={{ alignSelf: "flex-start" }}
+          >
+            Trabalhe conosco
+          </Link>
         </div>
         <form onSubmit={onSubmit}>
           <label>
@@ -77,7 +83,7 @@ const Contacts = () => {
             Ao preencher o formulário você concorda com os termos de nossa
             política de privacidade.
           </p>
-          <button type="submit">
+          <button type="submit" data-button="1">
             {loading ? "Enviando menssagem..." : "Enviar menssagem"}
           </button>
         </form>

@@ -49,30 +49,13 @@
     & h3 {
       font-size: 1.6rem;
       margin-bottom: 1.1rem;
+      color: var(--text-white);
     }
 
     & p {
       font-size: 1.12rem;
       line-height: 1.5;
       margin-bottom: 1.1rem;
-    }
-
-    & a {
-      font-size: 1.12rem;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 20px;
-      width: fit-content;
-      border: 1px solid var(--text-white-2);
-      color: var(--text-white);
-      transition: 0.3s all ease-in-out;
-    }
-
-    & a:hover {
-      background-color: var(--black);
-      color: var(--white);
     }
   }
 

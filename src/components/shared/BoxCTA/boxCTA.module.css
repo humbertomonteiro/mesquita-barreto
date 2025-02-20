@@ -4,6 +4,7 @@
   margin: 0 auto;
   margin-bottom: 100px;
   position: relative;
+  z-index: 1;
 
   & .content {
     width: 1300px;
@@ -45,22 +46,6 @@
       & p {
         font-size: 1.12rem;
         margin-bottom: 1rem;
-      }
-
-      & a {
-        display: block;
-        width: fit-content;
-        margin: 0 auto;
-        padding: 10px 20px;
-        font-size: 1.12rem;
-        border: 1px solid var(--white);
-        text-decoration: none;
-        color: var(--white);
-        transition: 0.3s all ease-in-out;
-      }
-
-      & a:hover {
-        background-color: var(--bg-dark-transparent);
       }
     }
 

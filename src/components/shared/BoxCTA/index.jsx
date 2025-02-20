@@ -16,6 +16,7 @@ const BoxCTA = () => {
             </h2>
             <p>Fale com nossa equipe e nos informe como podemos te ajudar.</p>
             <Link
+              data-button="2"
               target="_blank"
               to="https://api.whatsapp.com/send?phone=5585996135771&text=Ola%20vim%20do%20Site"
             >

@@ -15,7 +15,7 @@
     & .text {
       & h3 {
         font-size: 2rem;
-        color: var(--text-white);
+        color: var(--text);
         margin-bottom: 2rem;
       }
 

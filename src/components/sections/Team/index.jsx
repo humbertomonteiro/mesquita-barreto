@@ -16,7 +16,7 @@ const Team = () => {
       </Link>
       <div className={styles.info}>
         <h2>Rafael Ewerton Mesquita Barreto</h2>
-        <p>contato@ewertonbarreto.com.br</p>
+        <p>mesquitabarreto33@gmail.com</p>
         <p>OAB/CE 32.555</p>
       </div>
     </section>

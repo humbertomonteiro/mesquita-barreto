@@ -1,20 +1,24 @@
 import styles from "./header.module.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { HiBars3 } from "react-icons/hi2";
-import { IoIosSearch } from "react-icons/io";
+import { IoIosSearch, IoIosMoon } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import { MdSunny } from "react-icons/md";
 
 import Socials from "../../shared/Socials";
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-import logo from "../../../assets/imgs/logo-white.png";
+import logoWhite from "../../../assets/imgs/logo-white.png";
+import logoDark from "../../../assets/imgs/logo-dark.png";
 import office from "../../../assets/imgs/bg-office.jpg";
 
 import { useLocation } from "react-router-dom";
+
+import { useTheme } from "../../../hooks/useTheme";
 
 const Header = () => {
   const [showNavMobile, setShowNavMobile] = useState(false);
@@ -22,6 +26,17 @@ const Header = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+
+  const { theme, toggleTheme } = useTheme();
+
+  const [logo, setLogo] = useState(theme === "dark" ? logoWhite : logoDark);
+
+  useEffect(() => {
+    console.log("Tema atualizado:", theme);
+    setLogo(theme === "dark" ? logoWhite : logoDark);
+  }, [theme]);
+
+  if (!logo) return null;
 
   const changeCloseNavMobile = () => {
     setShowNavMobile(false);
@@ -46,6 +61,9 @@ const Header = () => {
         <div className={styles.buttonsLogo}>
           <button onClick={() => setShowInputSearch(true)}>
             <IoIosSearch />
+          </button>
+          <button onClick={toggleTheme}>
+            {theme === "light" ? <IoIosMoon /> : <MdSunny />}
           </button>
           <button onClick={() => setShowNavMobile(true)}>
             <HiBars3 />
@@ -72,6 +90,11 @@ const Header = () => {
         <li>
           <button onClick={() => setShowInputSearch(true)}>
             <IoIosSearch />
+          </button>
+        </li>
+        <li>
+          <button onClick={toggleTheme}>
+            {theme === "light" ? <IoIosMoon /> : <MdSunny />}
           </button>
         </li>
       </ul>
@@ -147,7 +170,7 @@ const Header = () => {
               <IoIosSearch />
             </button>
           </form>
-          <button o onClick={() => setShowInputSearch(false)}>
+          <button onClick={() => setShowInputSearch(false)}>
             <IoClose />
           </button>
         </div>

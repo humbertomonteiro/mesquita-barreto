@@ -104,7 +104,7 @@ const Footer = () => {
           <p>Av. Dom Luís, 1200, sala 1902, Torre 1, Pátio Dom Luís</p>
           <p>Aldeota, Fortaleza – CE</p>
           <p>CEP 60.160-230</p>
-          <p>(85) 99613-5771 – contato@ewertonbarreto.com.br</p>
+          <p>(85) 99613-5771 – mesquitabarreto33@gmail.com</p>
         </div>
         <div className={styles.socials}>
           <Socials />

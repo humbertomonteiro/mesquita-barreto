@@ -28,11 +28,11 @@ const TheOffice = () => {
         </p>
         <p>Com o cliente, em qualquer lugar, em qualquer momento, sempre.</p>
 
-        <Link onClick={topPage} to="/office">
+        <Link onClick={topPage} to="/office" data-button="1">
           Saiba mais
         </Link>
       </div>
-      <Link nClick={topPage} to="/office" className={styles.img}>
+      <Link onClick={topPage} to="/office" className={styles.img}>
         <img
           src="https://patiodomluis.com.br/wp-content/uploads/2024/11/Patio-Dom-Luis-Fortaleza-1.jpg"
           alt="Foto do predio de fortaleza"

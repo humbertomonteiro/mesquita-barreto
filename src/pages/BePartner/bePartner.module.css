@@ -47,24 +47,6 @@
     & p:nth-child(7) {
       grid-column: span 2;
     }
-
-    & button {
-      height: 50px;
-      padding: 0 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--black);
-      color: var(--white);
-      font-size: 1.12rem;
-      width: fit-content;
-      border: 0;
-      transition: 0.3s all ease-in-out;
-    }
-
-    & button:hover {
-      background-color: var(--bg-dark);
-    }
   }
 }
 
