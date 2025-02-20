@@ -1,11 +1,11 @@
 import styles from "./header.module.css";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { HiBars3 } from "react-icons/hi2";
-import { IoIosSearch, IoIosMoon } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { MdSunny } from "react-icons/md";
+// import { MdSunny } from "react-icons/md";
 
 import Socials from "../../shared/Socials";
 
@@ -13,12 +13,12 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import logoWhite from "../../../assets/imgs/logo-white.png";
-import logoDark from "../../../assets/imgs/logo-dark.png";
+// import logoDark from "../../../assets/imgs/logo-dark.png";
 import office from "../../../assets/imgs/bg-office.jpg";
 
 import { useLocation } from "react-router-dom";
 
-import { useTheme } from "../../../hooks/useTheme";
+// import { useTheme } from "../../../hooks/useTheme";
 
 const Header = () => {
   const [showNavMobile, setShowNavMobile] = useState(false);
@@ -27,16 +27,16 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { theme, toggleTheme } = useTheme();
+  // const { theme, toggleTheme } = useTheme();
 
-  const [logo, setLogo] = useState(theme === "dark" ? logoWhite : logoDark);
+  // const [logo, setLogo] = useState(theme === "dark" ? logoWhite : logoDark);
 
-  useEffect(() => {
-    console.log("Tema atualizado:", theme);
-    setLogo(theme === "dark" ? logoWhite : logoDark);
-  }, [theme]);
+  // useEffect(() => {
+  //   console.log("Tema atualizado:", theme);
+  //   setLogo(theme === "dark" ? logoWhite : logoDark);
+  // }, [theme]);
 
-  if (!logo) return null;
+  // if (!logo) return null;
 
   const changeCloseNavMobile = () => {
     setShowNavMobile(false);
@@ -55,16 +55,16 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link to="/">
-          <img src={logo} alt="Logo" />
+          <img src={logoWhite} alt="Logo" />
         </Link>
 
         <div className={styles.buttonsLogo}>
           <button onClick={() => setShowInputSearch(true)}>
             <IoIosSearch />
           </button>
-          <button onClick={toggleTheme}>
+          {/* <button onClick={toggleTheme}>
             {theme === "light" ? <IoIosMoon /> : <MdSunny />}
-          </button>
+          </button> */}
           <button onClick={() => setShowNavMobile(true)}>
             <HiBars3 />
           </button>
@@ -92,11 +92,11 @@ const Header = () => {
             <IoIosSearch />
           </button>
         </li>
-        <li>
+        {/* <li>
           <button onClick={toggleTheme}>
             {theme === "light" ? <IoIosMoon /> : <MdSunny />}
           </button>
-        </li>
+        </li> */}
       </ul>
 
       {showNavMobile && (
