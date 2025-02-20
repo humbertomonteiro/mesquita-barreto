@@ -4,9 +4,9 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 const Socials = () => {
   return (
     <div className={styles.socials}>
-      <a href="">
+      {/* <a href="">
         <FaFacebookF />
-      </a>
+      </a> */}
       <a
         href="https://www.instagram.com/rafaewertonbarreto?igsh=eXZpZWNld3doMW0%3D"
         target="_blank"

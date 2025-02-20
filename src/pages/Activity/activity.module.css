@@ -13,7 +13,7 @@
     max-width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     gap: 2rem;
     margin-bottom: 100px;
 
@@ -23,7 +23,7 @@
       flex-direction: column;
       gap: 20px;
       align-items: center;
-      border: 1px solid var(--border-color-2);
+      border: 1px solid var(--border-color);
       padding: 40px;
       transition: 0.3s all ease-in-out;
 
@@ -42,7 +42,7 @@
         font-size: 1.12rem;
         padding: 10px 20px;
         border: 1px solid var(--border-color);
-        color: var(--black);
+        color: var(--white);
         transition: 0.3s all ease-in-out;
       }
 
@@ -53,7 +53,7 @@
     }
 
     & .box:hover {
-      border-color: var(--border-color-3);
+      border-color: var(--border-color-2);
     }
   }
 }

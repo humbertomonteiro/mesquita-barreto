@@ -11,7 +11,7 @@ import Socials from "../../shared/Socials";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-import logo from "../../../assets/imgs/logo-dark.png";
+import logo from "../../../assets/imgs/logo-white.png";
 import office from "../../../assets/imgs/bg-office.jpg";
 
 import { useLocation } from "react-router-dom";

@@ -5,6 +5,9 @@
   --white: #fff;
   --black: #000;
 
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+
   --bg-dark: #292830;
   --bg-dark-2: #403f47;
   --bg-dark-transparent: rgba(41, 40, 48, 0.7);
@@ -17,6 +20,8 @@
   --text-gray-dark: #797979;
   --text-gray-dark-2: #4f4c56;
   --text-gray-light: #a8a8a8;
+  --text-white: #e0e0e0;
+  --text-white-2: #b0b0b0;
 
   --font-1: "Merriweather";
   --font-2: "Lato";
@@ -31,6 +36,8 @@
 body {
   font-family: sans-serif;
   font-family: var(--font-2);
+  background-color: var(--bg-secondary);
+  color: var(--text-white-2);
 }
 
 button {
@@ -46,8 +53,11 @@ img {
 }
 
 input,
-select {
+select,
+textarea {
   border-radius: 0;
+  background-color: var(--bg-secondary);
+  color: var(--text-white-2);
 }
 
 .swiper-button-prev,

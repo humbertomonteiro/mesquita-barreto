@@ -65,8 +65,8 @@
       align-items: center;
       padding: 10px 20px;
       width: fit-content;
-      border: 1px solid var(--black);
-      color: var(--black);
+      border: 1px solid var(--text-white-2);
+      color: var(--text-white);
       transition: 0.3s all ease-in-out;
     }
 

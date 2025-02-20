@@ -17,6 +17,8 @@ const ContactActivity = () => {
     "blindagem-patrimonial": "Blindagem Patrimonial",
     "reducao-de-impostos": "Redução de Impostos",
     "planejamento-tributario": "Planejamento Tributário",
+    "defesa-em-execucao-fiscal": "Defesa em execução fiscal",
+    "demanda-de-empresas": "Demanda de empresas",
     holding: "Holding",
   };
 
