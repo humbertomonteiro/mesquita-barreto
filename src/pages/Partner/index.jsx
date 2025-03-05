@@ -16,7 +16,7 @@ const Partner = () => {
         </div>
         <div className={styles.text}>
           <h3>Rafael Ewerton Mesquita Barreto</h3>
-          <span>contato@mesquita.com.br</span>
+          <span>contato@mesquitabarretoadvocacia.com.br</span>
           <span>OAB/CE 32.555</span>
           <ul>
             <li>

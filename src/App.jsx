@@ -3,6 +3,7 @@ import RoutesApp from "./routes/RoutesApp";
 import Header from "./components/templates/Header";
 import Main from "./components/templates/Main";
 import Footer from "./components/templates/Footer";
+import ButtonWhatsapp from "./components/shared/ButtonWhatsapp";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <RoutesApp />
       </Main>
       <Footer />
+      <ButtonWhatsapp />
     </BrowserRouter>
   );
 }
