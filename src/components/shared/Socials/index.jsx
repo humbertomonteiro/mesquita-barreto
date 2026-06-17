@@ -7,10 +7,7 @@ const Socials = () => {
       {/* <a href="">
         <FaFacebookF />
       </a> */}
-      <a
-        href="https://www.instagram.com/rafaewertonbarreto?igsh=eXZpZWNld3doMW0%3D"
-        target="_blank"
-      >
+      <a href="https://www.instagram.com/ewertonbarretoadv/" target="_blank">
         <FaInstagram />
       </a>
     </div>
