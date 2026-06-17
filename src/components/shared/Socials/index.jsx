@@ -7,7 +7,7 @@ const Socials = () => {
       {/* <a href="">
         <FaFacebookF />
       </a> */}
-      <a href="https://www.instagram.com/ewertonbarretoadv/" target="_blank">
+      <a href="https://www.instagram.com/ewertonbarretoadv/" target="_blank" aria-label="Instagram de Rafael Ewerton Barreto Advogado" rel="noopener noreferrer">
         <FaInstagram />
       </a>
     </div>

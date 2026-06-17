@@ -59,13 +59,10 @@ const Header = () => {
         </Link>
 
         <div className={styles.buttonsLogo}>
-          <button onClick={() => setShowInputSearch(true)}>
+          <button aria-label="Pesquisar" onClick={() => setShowInputSearch(true)}>
             <IoIosSearch />
           </button>
-          {/* <button onClick={toggleTheme}>
-            {theme === "light" ? <IoIosMoon /> : <MdSunny />}
-          </button> */}
-          <button onClick={() => setShowNavMobile(true)}>
+          <button aria-label="Abrir menu" onClick={() => setShowNavMobile(true)}>
             <HiBars3 />
           </button>
         </div>
@@ -88,7 +85,7 @@ const Header = () => {
           <Link to="/contacts">Contato</Link>
         </li>
         <li>
-          <button onClick={() => setShowInputSearch(true)}>
+          <button aria-label="Pesquisar" onClick={() => setShowInputSearch(true)}>
             <IoIosSearch />
           </button>
         </li>
@@ -102,7 +99,7 @@ const Header = () => {
       {showNavMobile && (
         <div>
           <div className={styles.closeNavMobile}>
-            <button onClick={() => setShowNavMobile(false)}>
+            <button aria-label="Fechar menu" onClick={() => setShowNavMobile(false)}>
               <IoClose />
             </button>
           </div>
@@ -166,11 +163,11 @@ const Header = () => {
               placeholder="Buscar artigos..."
               required
             />
-            <button type="submit">
+            <button type="submit" aria-label="Pesquisar">
               <IoIosSearch />
             </button>
           </form>
-          <button onClick={() => setShowInputSearch(false)}>
+          <button aria-label="Fechar pesquisa" onClick={() => setShowInputSearch(false)}>
             <IoClose />
           </button>
         </div>

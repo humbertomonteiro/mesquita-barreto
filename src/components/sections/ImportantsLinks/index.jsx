@@ -16,7 +16,7 @@ const ImportantsLinks = () => {
   };
   return (
     <nav className={styles.container}>
-      <ul className={styles.mobile}>
+      <div className={styles.mobile}>
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -43,28 +43,30 @@ const ImportantsLinks = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <li>
+            <div className={styles.item}>
               <Link
                 to="https://www.instagram.com/rafaewertonbarreto?igsh=eXZpZWNld3doMW0%3D"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Rafael Ewerton Barreto Advogado"
               >
                 <AiFillInstagram />
                 Instagram
               </Link>
-            </li>
+            </div>
           </SwiperSlide>
           {areasActivity.map((activity) => (
-            <SwiperSlide>
-              <li key={activity.path}>
+            <SwiperSlide key={activity.path}>
+              <div className={styles.item}>
                 <Link onClick={topPage} to={activity.path}>
                   {activity.icon}
                   {activity.title}
                 </Link>
-              </li>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </ul>
+      </div>
     </nav>
   );
 };
