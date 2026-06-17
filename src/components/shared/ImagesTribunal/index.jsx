@@ -9,6 +9,13 @@ import img4 from "../../../assets/imgs/office4.png";
 
 const images = [img1, img2, img3, img4];
 
+const altTexts = [
+  "Fachada do Pátio Dom Luís, endereço do escritório Mesquita Barreto em Fortaleza",
+  "Interior do escritório Mesquita Barreto Advocacia",
+  "Sala de reuniões do escritório Mesquita Barreto Advocacia",
+  "Área de trabalho do escritório Mesquita Barreto Advocacia",
+];
+
 const ImagesTribunal = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,7 +47,7 @@ const ImagesTribunal = () => {
         {images.map((image, index) => (
           <div key={index} onClick={() => openImage(index)}>
             <LuZoomIn className={styles.icon} />
-            <img src={image} alt={`Imagem ${index + 1}`} />
+            <img src={image} alt={altTexts[index]} />
           </div>
         ))}
       </div>
@@ -55,7 +62,7 @@ const ImagesTribunal = () => {
           </button>
           <img
             src={selectedImage}
-            alt="Imagem ampliada"
+            alt={altTexts[currentIndex]}
             className={styles.modalImage}
           />
           <button className={styles.next} onClick={nextImage}>

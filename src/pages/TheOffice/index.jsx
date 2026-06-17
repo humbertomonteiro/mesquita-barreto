@@ -1,13 +1,20 @@
 import BoxCTA from "../../components/shared/BoxCTA";
 import ImagesTribunal from "../../components/shared/ImagesTribunal";
 import Title from "../../components/shared/Title";
+import SEO from "../../components/shared/SEO";
 import styles from "./theOffice.module.css";
 
 const TheOffice = () => {
   return (
+    <>
+      <SEO
+        title="O Escritório | Mesquita Barreto Advocacia"
+        description="Conheça o escritório Mesquita Barreto Advocacia. Sede na Av. Dom Luís, 1200, Fortaleza-CE. Equipe especializada em direito tributário e empresarial com mais de 10 anos de experiência."
+        canonical="/office"
+      />
     <div className={styles.container}>
       <section className={styles.office}>
-        <Title text="O Escritório" />
+        <Title text="O Escritório" as="h1" />
         <img
           src="https://patiodomluis.com.br/wp-content/uploads/2024/11/Patio-Dom-Luis-Fortaleza-1.jpg"
           alt="Predio onde está localizado o escritório"
@@ -35,6 +42,7 @@ const TheOffice = () => {
 
       <BoxCTA />
     </div>
+    </>
   );
 };
 

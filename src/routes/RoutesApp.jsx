@@ -20,7 +20,7 @@ const RoutesApp = () => {
       <Route path="/partner" element={<Partner />} />
       <Route path="/activity" element={<Activity />} />
       <Route path="/activity/:activity" element={<ContactActivity />} />
-      <Route path="/articles" element={<Articles />} />
+      <Route path="/articles" element={<Articles isPage={true} />} />
       <Route path="/articles/:id" element={<Article />} />
       <Route path="/contacts" element={<Contacts />} />
 

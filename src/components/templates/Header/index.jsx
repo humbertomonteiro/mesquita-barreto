@@ -55,7 +55,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link to="/">
-          <img src={logoWhite} alt="Logo" />
+          <img src={logoWhite} alt="Mesquita Barreto Advocacia" />
         </Link>
 
         <div className={styles.buttonsLogo}>
@@ -153,7 +153,7 @@ const Header = () => {
       <div
         className={location.pathname === "/" ? styles.imgHome : styles.imgPath}
       >
-        <img src={office} alt="Advogado Mesquita" />
+        <img src={office} alt="Escritório Mesquita Barreto Advocacia na Av. Dom Luís, Fortaleza" />
       </div>
 
       {showInputSearch && (

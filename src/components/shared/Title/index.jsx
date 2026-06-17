@@ -1,7 +1,7 @@
 import styles from "./title.module.css";
 
-const Title = ({ text }) => {
-  return <h2 className={styles.title}>{text}</h2>;
+const Title = ({ text, as: Tag = "h2" }) => {
+  return <Tag className={styles.title}>{text}</Tag>;
 };
 
 export default Title;

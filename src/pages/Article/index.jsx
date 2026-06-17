@@ -1,4 +1,5 @@
 import styles from "./article.module.css";
+import SEO from "../../components/shared/SEO";
 
 import { articles } from "../../data/constants/articles";
 
@@ -7,13 +8,20 @@ import Articles from "../Articles";
 
 const Article = () => {
   const { id } = useParams();
+  const article = articles.find((a) => a.id === +id);
 
-  const getArticle = articles.filter((article) => article.id === +id);
   return (
-    <div className={styles.container}>
-      <article>{getArticle[0].content}</article>
-      <Articles title="Veja outros conteúdos" />
-    </div>
+    <>
+      <SEO
+        title={`${article.title} | Mesquita Barreto Advocacia`}
+        description={article.description}
+        canonical={`/articles/${id}`}
+      />
+      <div className={styles.container}>
+        <article>{article.content}</article>
+        <Articles title="Veja outros conteúdos" />
+      </div>
+    </>
   );
 };
 

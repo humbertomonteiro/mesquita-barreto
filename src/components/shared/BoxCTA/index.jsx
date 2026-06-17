@@ -24,7 +24,7 @@ const BoxCTA = () => {
             </Link>
           </div>
         </div>
-        <img src={img} alt="Advogado Mesquita" />
+        <img src={img} alt="Dr. Rafael Mesquita Barreto, advogado tributarista em Fortaleza" />
       </div>
       <div className={styles.boxStyle}></div>
     </section>
