@@ -59,3 +59,43 @@
     }
   }
 }
+/* Deixa cada card em coluna, com o botão sempre alinhado embaixo */
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+ 
+/* Descrição breve de cada área */
+.description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 10px 0 18px;
+  flex-grow: 1;
+}
+ 
+/* Botão de WhatsApp dentro de cada card */
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: #0a0a0a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 11px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s all;
+  margin-top: auto;
+}
+.whatsappBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+.whatsappBtn svg {
+  font-size: 1.15rem;
+}
+ 
