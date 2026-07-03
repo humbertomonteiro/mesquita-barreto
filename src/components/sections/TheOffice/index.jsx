@@ -2,6 +2,8 @@ import styles from "./theOffice.module.css";
 
 import { Link } from "react-router-dom";
 
+import predio from "../../../assets/imgs/predio.jpeg";
+
 const TheOffice = () => {
   const topPage = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -34,8 +36,8 @@ const TheOffice = () => {
       </div>
       <Link onClick={topPage} to="/office" className={styles.img}>
         <img
-          src="https://patiodomluis.com.br/wp-content/uploads/2024/11/Patio-Dom-Luis-Fortaleza-1.jpg"
-          alt="Foto do predio de fortaleza"
+          src={predio}
+          alt="Prédio do escritório Mesquita Barreto Advocacia em Fortaleza"
         />
       </Link>
     </section>
