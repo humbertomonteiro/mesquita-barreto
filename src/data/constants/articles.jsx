@@ -2,6 +2,12 @@
 // Conteúdo real (SEO jurídico). Cada artigo possui: id, slug, title,
 // description e content. Os subtítulos usam <h3> e o corpo usa <p>/<ul>,
 // seguindo o padrão original do site.
+//
+// >>> ALTERAÇÃO: o antigo CTA em texto (<p><strong>➜ ...</strong></p>) foi
+// substituído pelo componente <BotaoDiagnostico />, que abre o WhatsApp com
+// a mensagem certa de cada frente. Import adicionado na primeira linha.
+
+import BotaoDiagnostico from "../../../components/shared/BotaoDiagnostico";
 
 const Article1 = () => {
   return (
@@ -61,13 +67,7 @@ const Article1 = () => {
         análise do histórico real do processo confirma com segurança. Cada caso
         tem suas particularidades, e detalhes nas datas fazem toda a diferença.
       </p>
-      <p>
-        <strong>
-          ➜ Tem uma dívida antiga com o governo? Faça uma análise gratuita do seu
-          processo e descubra se ela já prescreveu. Fale com a Mesquita Barreto
-          Advocacia.
-        </strong>
-      </p>
+      <BotaoDiagnostico frente="prescricao" />
     </div>
   );
 };
@@ -113,13 +113,7 @@ const Article2 = () => {
         que o prazo já tenha se esgotado e que o seu nome possa ser retirado do
         processo, protegendo o seu patrimônio pessoal.
       </p>
-      <p>
-        <strong>
-          ➜ Foi incluído pessoalmente numa dívida da empresa? Verifique
-          gratuitamente se essa inclusão ainda é válida. Fale com a Mesquita
-          Barreto Advocacia.
-        </strong>
-      </p>
+      <BotaoDiagnostico frente="prescricao" />
     </div>
   );
 };
@@ -167,13 +161,7 @@ const Article3 = () => {
         vezes a pessoa física tem isenções que compensam mais. Por isso a
         estrutura precisa ser desenhada para o seu objetivo específico.
       </p>
-      <p>
-        <strong>
-          ➜ Tem imóveis alugados e quer saber quanto poderia economizar? Faça um
-          diagnóstico gratuito comparando sua situação atual com uma holding.
-          Fale com a Mesquita Barreto Advocacia.
-        </strong>
-      </p>
+      <BotaoDiagnostico frente="holding" />
     </div>
   );
 };
@@ -235,13 +223,7 @@ const Article4 = () => {
         Organizar isso em vida é deixar tudo claro e resolvido, evitando que a
         família precise lidar com burocracia e custos altos durante o luto.
       </p>
-      <p>
-        <strong>
-          ➜ Quer organizar a sucessão do seu patrimônio e proteger sua família?
-          Converse gratuitamente sobre planejamento sucessório com a Mesquita
-          Barreto Advocacia.
-        </strong>
-      </p>
+      <BotaoDiagnostico frente="holding" />
     </div>
   );
 };
@@ -293,13 +275,7 @@ const Article5 = () => {
         vale também para os herdeiros, quando o titular faleceu sem ter pedido a
         isenção.
       </p>
-      <p>
-        <strong>
-          ➜ Você ou um familiar é aposentado e tem uma doença grave? Verifique
-          gratuitamente o direito à isenção e quanto pode receber de volta. Fale
-          com a Mesquita Barreto Advocacia.
-        </strong>
-      </p>
+      <BotaoDiagnostico frente="isencao" />
     </div>
   );
 };
@@ -356,13 +332,7 @@ const Article6 = () => {
         que pode ser recuperado dos últimos cinco anos — sempre dentro da lei.
         Muitas vezes, a economia gerada supera com folga o custo da análise.
       </p>
-      <p>
-        <strong>
-          ➜ Acha que sua empresa pode estar pagando imposto demais? Faça um
-          diagnóstico tributário gratuito e descubra onde economizar. Fale com a
-          Mesquita Barreto Advocacia.
-        </strong>
-      </p>
+      <BotaoDiagnostico frente="recuperacao" />
     </div>
   );
 };
@@ -417,4 +387,3 @@ export const articles = [
       "Conheça cinco sinais de que sua empresa pode estar pagando mais tributos do que deveria e descubra como uma revisão tributária pode recuperar valores.",
   },
 ];
-
