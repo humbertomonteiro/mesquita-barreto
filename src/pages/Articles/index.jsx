@@ -3,13 +3,12 @@ import { useState } from "react";
 import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 
 import Title from "../../components/shared/Title";
-import SEO from "../../components/shared/SEO";
 import BoxCTA from "../../components/shared/BoxCTA";
 import { articles } from "../../data/constants/articles";
 
 import { IoIosSearch } from "react-icons/io";
 
-const Articles = ({ title = "Artigos", isPage = false }) => {
+const Articles = ({ title = "Artigos" }) => {
   const { id } = useParams();
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(1);
@@ -45,66 +44,62 @@ const Articles = ({ title = "Artigos", isPage = false }) => {
     e.preventDefault();
     if (search.trim()) {
       navigate(`/articles?search=${encodeURIComponent(search)}`);
+      setShowInputSearch(false);
       setSearch("");
     }
   };
 
   return (
     <>
-      {isPage && (
-        <SEO
-          title="Blog Jurídico | Artigos sobre Direito Tributário | Mesquita Barreto"
-          description="Artigos e conteúdos sobre direito tributário, planejamento patrimonial, holding familiar e temas jurídicos para empresas e pessoas físicas."
-          canonical="/articles"
-        />
-      )}
-      <div className={styles.container}>
-        <Title text={title} as={isPage ? "h1" : "h2"} />
+      {
+        <div className={styles.container}>
+          <Title text={title} />
 
-        {paginatedArticles.length > 0 ? (
-          paginatedArticles.map((article) => (
-            <div key={article.id} className={styles.articles}>
-              <h2>{article.title}</h2>
-              <p>{article.description}</p>
-              <Link data-button="3" to={`/articles/${article.id}`}>
-                Saiba mais
-              </Link>
+          {paginatedArticles.length > 0 ? (
+            paginatedArticles.map((article) => (
+              <div key={article.id} className={styles.articles}>
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+                <Link data-button="3" to={`/articles/${article.slug || article.id}`}>
+                  Saiba mais
+                </Link>
+              </div>
+            ))
+          ) : (
+            <div className={styles.noArticles}>
+              <p>Nenhum resultado para: "{searchQuery}"</p>
+              <form onSubmit={handleSearch}>
+                <input
+                  type="text"
+                  placeholder="Pesquise outro artigo..."
+                  onChange={(e) => setSearch(e.target.value)}
+                  value={search}
+                  required
+                />
+                <button>
+                  <IoIosSearch />
+                </button>
+              </form>
             </div>
-          ))
-        ) : (
-          <div className={styles.noArticles}>
-            <p>Nenhum resultado para: "{searchQuery}"</p>
-            <form onSubmit={handleSearch}>
-              <input
-                type="text"
-                placeholder="Pesquise outro artigo..."
-                onChange={(e) => setSearch(e.target.value)}
-                value={search}
-                required
-              />
-              <button>
-                <IoIosSearch />
-              </button>
-            </form>
-          </div>
-        )}
+          )}
 
-        {totalPages > 1 && (
-          <div className={styles.pagination}>
-            {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index}
-                className={currentPage === index + 1 ? styles.activePage : ""}
-                onClick={() => setCurrentPage(index + 1)}
-              >
-                {index + 1}
-              </button>
-            ))}
-          </div>
-        )}
+          {totalPages > 1 && (
+            <div className={styles.pagination}>
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index}
+                  className={currentPage === index + 1 ? styles.activePage : ""}
+                  onClick={() => setCurrentPage(index + 1)}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+          )}
 
-        <BoxCTA />
-      </div>
+          <BoxCTA />
+        </div>
+      }
     </>
   );
 };
