@@ -173,7 +173,7 @@
     }
 
     .closeNavMobile {
-      width: 366px;
+      width: 300px;
       height: 82px;
       background-color: var(--bg-tertiary);
       position: fixed;
