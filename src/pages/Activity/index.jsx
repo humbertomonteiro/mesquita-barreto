@@ -1,11 +1,11 @@
 import Title from "../../components/shared/Title";
 import SEO from "../../components/shared/SEO";
 import styles from "./activity.module.css";
-
 import BoxCTA from "../../components/shared/BoxCTA";
-
-import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 import { areasActivity } from "../../data/constants/activitys";
+
+const WHATSAPP_NUMERO = "5585996135771";
 
 const Activity = () => {
   return (
@@ -25,17 +25,26 @@ const Activity = () => {
             <div key={index} className={styles.box}>
               {item.icon}
               <h2>{item.title}</h2>
-              <Link data-button="3" to={item.path}>
-                Saiba mais
-              </Link>
+              <p className={styles.description}>{item.description}</p>
+              <a
+                className={styles.whatsappBtn}
+                href={
+                  "https://api.whatsapp.com/send?phone=" +
+                  WHATSAPP_NUMERO +
+                  "&text=" +
+                  encodeURIComponent(item.whatsapp)
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp /> Quero saber mais
+              </a>
             </div>
           ))}
         </section>
-
         <BoxCTA />
       </div>
     </>
   );
 };
-
 export default Activity;
