@@ -8,6 +8,7 @@
 // a mensagem certa de cada frente. Import adicionado na primeira linha.
 
 import BotaoDiagnostico from "../../components/shared/BotaoDiagnostico";
+import CalculadoraReforma from "../../components/shared/CalculadoraReforma";
 
 const Article1 = () => {
   return (
@@ -161,6 +162,7 @@ const Article3 = () => {
         vezes a pessoa física tem isenções que compensam mais. Por isso a
         estrutura precisa ser desenhada para o seu objetivo específico.
       </p>
+      <CalculadoraReforma />
       <BotaoDiagnostico frente="holding" />
     </div>
   );
@@ -332,6 +334,7 @@ const Article6 = () => {
         que pode ser recuperado dos últimos cinco anos — sempre dentro da lei.
         Muitas vezes, a economia gerada supera com folga o custo da análise.
       </p>
+      <CalculadoraReforma />
       <BotaoDiagnostico frente="recuperacao" />
     </div>
   );
