@@ -6,6 +6,7 @@ import {
 } from "react-icons/ri";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { MdWork } from "react-icons/md";
+import { FaTrademark, FaHeartbeat, FaSitemap, FaShieldAlt } from "react-icons/fa";
 
 export const areasActivity = [
   {
@@ -57,7 +58,7 @@ export const areasActivity = [
   },
   {
     title: "Registro de Marcas e Patentes",
-    icon: <IoIosLock />,
+    icon: <FaTrademark />,
     description:
       "Protegemos o nome, a logo e as criações da sua empresa, garantindo que sejam exclusivamente seus e não possam ser usados por terceiros.",
     whatsapp:
@@ -65,7 +66,7 @@ export const areasActivity = [
   },
   {
     title: "Isenção de Imposto de Renda",
-    icon: <RiMoneyDollarCircleFill />,
+    icon: <FaHeartbeat />,
     description:
       "Aposentados e pensionistas com doença grave podem parar de pagar Imposto de Renda e recuperar o que pagaram nos últimos anos. Verificamos o seu direito.",
     whatsapp:
@@ -73,7 +74,7 @@ export const areasActivity = [
   },
   {
     title: "Planejamento Sucessório",
-    icon: <RiSafe3Fill />,
+    icon: <FaSitemap />,
     description:
       "Organizamos a transmissão do seu patrimônio à família, reduzindo custos e evitando o inventário, para proteger quem você ama.",
     whatsapp:
@@ -81,7 +82,7 @@ export const areasActivity = [
   },
   {
     title: "Dívidas com o Governo",
-    icon: <RiSwordFill />,
+    icon: <FaShieldAlt />,
     description:
       "Analisamos suas dívidas fiscais para identificar se já prescreveram ou podem ser reduzidas, muitas vezes livrando você de pagar o que não deve.",
     whatsapp:
