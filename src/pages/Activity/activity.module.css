@@ -1,4 +1,7 @@
 .container {
+  width: 100%;
+  overflow-x: hidden;
+
   & p {
     width: 640px;
     max-width: 90%;
@@ -7,15 +10,18 @@
     margin-bottom: 60px;
     font-size: 1.2rem;
   }
+
   .boxes {
     width: 900px;
     max-width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
     margin-bottom: 100px;
+
     & .box {
+      min-width: 0;
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -23,20 +29,24 @@
       border: var(--border-2);
       padding: 28px 24px;
       transition: 0.3s all ease-in-out;
+
       & svg {
         font-size: 2.6rem;
         color: var(--text-gray-dark-2);
       }
+
       & h3 {
         font-size: 1.25rem;
         text-align: center;
       }
     }
+
     & .box:hover {
       border: var(--border-3);
     }
   }
 }
+
 @media (max-width: 880px) {
   .container {
     & .boxes {
@@ -44,6 +54,7 @@
     }
   }
 }
+
 /* Deixa cada card em coluna, com o botão sempre alinhado embaixo */
 .box {
   display: flex;
