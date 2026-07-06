@@ -7,7 +7,7 @@
 // substituído pelo componente <BotaoDiagnostico />, que abre o WhatsApp com
 // a mensagem certa de cada frente. Import adicionado na primeira linha.
 
-import BotaoDiagnostico from "../../../components/shared/BotaoDiagnostico";
+import BotaoDiagnostico from "../../components/shared/BotaoDiagnostico";
 
 const Article1 = () => {
   return (
