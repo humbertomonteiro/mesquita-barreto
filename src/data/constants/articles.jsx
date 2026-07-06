@@ -340,6 +340,105 @@ const Article6 = () => {
   );
 };
 
+const Article7 = () => {
+  return (
+    <div>
+      <h2>O fim da sonegação: por que a reforma vai "expulsar" do mercado quem não emite nota</h2>
+      <p>
+        Durante décadas, operar "por fora" foi uma prática comum em muitos
+        setores no Brasil: vender sem nota, comprar sem nota, reduzir o imposto
+        na informalidade. A fiscalização corria atrás, mas não dava conta de
+        tudo. Com a reforma tributária, isso está mudando — e não pela força da
+        fiscalização, mas por um motivo muito mais eficiente: o próprio mercado
+        passou a ter interesse em exigir a nota.
+      </p>
+      <p>
+        Este artigo explica, em linguagem simples, por que a informalidade ficou
+        inviável na cadeia formal e o que a sua empresa precisa fazer para não
+        ficar para trás.
+      </p>
+      <h3>O coração da mudança: o crédito de imposto</h3>
+      <p>
+        A reforma cria dois novos impostos sobre o consumo, o IBS e a CBS, que
+        funcionam pelo princípio da não cumulatividade. Na prática, significa o
+        seguinte: cada empresa só paga imposto sobre o valor que ela adiciona,
+        descontando o imposto que já foi pago pelos seus fornecedores.
+      </p>
+      <p>
+        Esse desconto se chama crédito. E aqui está o ponto central: o crédito só
+        existe se houver nota fiscal eletrônica destacando o imposto. Sem nota,
+        não há crédito.
+      </p>
+      <h3>Por que isso muda tudo</h3>
+      <p>
+        Imagine que a sua empresa vende para outra empresa. Se você não emite
+        nota, o seu cliente não recebe o crédito do imposto — e, por isso, ele
+        paga mais caro no fim das contas. Ou seja: comprar de quem não dá nota
+        passou a ser um mau negócio para o comprador.
+      </p>
+      <p>
+        O incentivo se inverteu. Antes, comprar "sem nota" deixava a operação
+        mais barata para os dois lados. Agora, o comprador que abre mão da nota
+        está jogando dinheiro fora. Por isso, ele mesmo vai cobrar a nota de você
+        — algo que a fiscalização sozinha nunca conseguiu fazer com eficiência.
+      </p>
+      <p>
+        É por isso que se diz que a reforma faz a cadeia se autofiscalizar: cada
+        elo cobra o elo anterior, porque é do interesse financeiro de cada um.
+      </p>
+      <h3>O reforço tecnológico: o split payment</h3>
+      <p>
+        Há ainda um segundo mecanismo que fecha o cerco: o chamado split payment,
+        ou "pagamento dividido". A ideia é que, no momento em que o pagamento é
+        processado pelo banco, a parte do imposto já seja separada e recolhida
+        automaticamente ao governo.
+      </p>
+      <p>
+        Na prática, o sistema financeiro passa a funcionar como um braço da
+        arrecadação, em tempo real. Isso reduz drasticamente o espaço para deixar
+        de recolher o imposto depois — porque ele é retido na hora da transação.
+      </p>
+      <h3>Atenção: o que isso não significa</h3>
+      <p>
+        É importante ser honesto. A reforma torna a sonegação muito mais difícil,
+        cara e arriscada — mas não "acaba" com toda a informalidade de um dia
+        para o outro. O mecanismo é mais forte nas vendas entre empresas, onde o
+        crédito vale dinheiro. Na venda direta ao consumidor final (que não usa
+        crédito), o efeito é menor e ainda depende de fiscalização e de outros
+        incentivos.
+      </p>
+      <p>
+        Ainda assim, a direção é clara: para qualquer empresa que compra de
+        fornecedores e vende para outras empresas, a era de operar na
+        informalidade está com os dias contados.
+      </p>
+      <h3>O que a sua empresa deve fazer agora</h3>
+      <p>
+        A boa notícia é que sair da informalidade não significa, necessariamente,
+        pagar muito mais imposto. Com planejamento, é possível se formalizar de
+        forma inteligente — escolhendo o regime tributário certo, aproveitando os
+        créditos a que se tem direito e pagando o mínimo que a lei permite, e não
+        o máximo.
+      </p>
+      <p>Procure orientação se a sua empresa:</p>
+      <ul>
+        <li>Ainda opera parcialmente na informalidade ou "por fora".</li>
+        <li>Nunca revisou qual é o melhor regime tributário para o seu caso.</li>
+        <li>
+          Vende para outras empresas e pode estar perdendo clientes por não se
+          adequar.
+        </li>
+        <li>
+          Quer entender quanto vai pagar de imposto no novo sistema — e como
+          reduzir isso de forma legal.
+        </li>
+      </ul>
+      <CalculadoraReforma />
+      <BotaoDiagnostico frente="recuperacao" />
+    </div>
+  );
+};
+
 export const articles = [
   {
     id: 1,
@@ -388,5 +487,13 @@ export const articles = [
     title: "5 sinais de que sua empresa pode estar pagando imposto demais",
     description:
       "Conheça cinco sinais de que sua empresa pode estar pagando mais tributos do que deveria e descubra como uma revisão tributária pode recuperar valores.",
+  },
+  {
+    id: 7,
+    slug: "reforma-tributaria-fim-da-sonegacao",
+    content: <Article7 />,
+    title: "Reforma Tributária e o fim da sonegação: o que muda para a sua empresa",
+    description:
+      "A reforma tributária cria um sistema em que o próprio mercado cobra a nota fiscal. Entenda por que a informalidade ficou inviável e como adequar sua empresa.",
   },
 ];
