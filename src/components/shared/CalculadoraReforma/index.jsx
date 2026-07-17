@@ -106,8 +106,15 @@ const CalculadoraReforma = () => {
   let link = "";
   if (finished) {
     resultado = gerarResultado(answers);
+    const rotulos = ["Setor", "Faturamento", "Regime", "Vende para", "Emite nota"];
+    const respostasTexto = PERGUNTAS.map(
+      (p, i) => "\u2022 " + rotulos[i] + ": " + p.opts[answers[i]]
+    ).join("\n");
     const msg =
-      "Olá! Fiz a calculadora da reforma no site e gostaria de um diagnóstico para minha empresa. Meu resultado foi: " +
+      "Olá! Fiz a calculadora da reforma no site e gostaria de um diagnóstico para minha empresa.\n\n" +
+      "Minhas respostas:\n" +
+      respostasTexto +
+      "\n\nResultado: " +
       resultado.tier;
     link = "https://api.whatsapp.com/send?phone=" + NUMERO + "&text=" + encodeURIComponent(msg);
   }
