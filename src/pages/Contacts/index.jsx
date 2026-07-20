@@ -51,7 +51,7 @@ const Contacts = () => {
             <div className={styles.boxInfo}>
               <h2>E-mail e Telefone</h2>
               <p>Telefone: (85) 9 99613-5771</p>
-              <p>E-mail: contato@mesquitabarretoadvocacia.com.br</p>
+              <p>E-mail: mesquitabarretoadvocacia@gmail.com</p>
             </div>
             <Link
               data-button="3"
