@@ -44,13 +44,24 @@ for (const rota of rotas) {
 
     let html = template;
     if (tagsHead.length) {
-      // Remove do template as tags que a página redefine, para não duplicar
-      if (tagsHead.some((t) => t.startsWith("<title")))
-        html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/, "");
-      if (tagsHead.some((t) => /name="description"/.test(t)))
-        html = html.replace(/<meta\s[^>]*name="description"[^>]*>/, "");
-      if (tagsHead.some((t) => /rel="canonical"/.test(t)))
-        html = html.replace(/<link\s[^>]*rel="canonical"[^>]*>/, "");
+      // Remove do index.html as tags que a página redefine (título,
+      // descrição, canônico e og:/twitter:), para não duplicar
+      for (const t of tagsHead) {
+        if (t.startsWith("<title")) {
+          html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/, "");
+        } else if (/rel="canonical"/.test(t)) {
+          html = html.replace(/<link\s[^>]*rel="canonical"[^>]*>/, "");
+        } else {
+          const chave = t.match(/(?:name|property)="([^"]+)"/);
+          if (chave) {
+            const nome = chave[1].replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            html = html.replace(
+              new RegExp(`<meta\\s[^>]*(?:name|property)="${nome}"[^>]*>`),
+              ""
+            );
+          }
+        }
+      }
       // Marca as tags do pré-render e as remove assim que o navegador abre a
       // página: robôs sem JavaScript leem as tags; no navegador, o React
       // recoloca as dele (evita título/descrição duplicados).
