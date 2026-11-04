@@ -82,7 +82,7 @@ const Header = () => {
           <Link to="/articles">Artigos</Link>
         </li>
         <li>
-          <Link to="/perguntas-frequentes">Dúvidas</Link>
+          <Link to="/perguntas-frequentes">Perguntas Frequentes</Link>
         </li>
         <li>
           <Link to="/contacts">Contato</Link>
