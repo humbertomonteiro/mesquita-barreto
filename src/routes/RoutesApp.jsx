@@ -11,6 +11,7 @@ const Contacts = lazy(() => import("../pages/Contacts"));
 const WorkUs = lazy(() => import("../pages/WorkUs"));
 const BePartner = lazy(() => import("../pages/BePartner"));
 const ContactActivity = lazy(() => import("../pages/ContactActivity"));
+const FAQ = lazy(() => import("../pages/FAQ"));
 
 const RoutesApp = () => {
   return (
@@ -26,6 +27,7 @@ const RoutesApp = () => {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/work-us" element={<WorkUs />} />
         <Route path="/be-partner" element={<BePartner />} />
+        <Route path="/perguntas-frequentes" element={<FAQ />} />
       </Routes>
     </Suspense>
   );
