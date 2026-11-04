@@ -4,6 +4,7 @@ import { articles } from "../../data/constants/articles";
 
 import { useParams } from "react-router-dom";
 import Articles from "../Articles";
+import SEO from "../../components/shared/SEO";
 
 const Article = () => {
   const { id } = useParams();
@@ -17,6 +18,14 @@ const Article = () => {
 
   return (
     <div className={styles.container}>
+      {/* Título, descrição e link canônico próprios de cada artigo.
+          O canônico usa sempre o slug, inclusive quando o acesso é pelo
+          endereço antigo com número (/articles/1). */}
+      <SEO
+        title={`${getArticle[0].title} | Mesquita Barreto`}
+        description={getArticle[0].description}
+        canonical={`/articles/${getArticle[0].slug}`}
+      />
       <article>{getArticle[0].content}</article>
       <Articles title="Veja outros conteúdos" />
     </div>
