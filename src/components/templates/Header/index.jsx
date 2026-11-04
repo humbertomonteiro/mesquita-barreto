@@ -82,6 +82,9 @@ const Header = () => {
           <Link to="/articles">Artigos</Link>
         </li>
         <li>
+          <Link to="/perguntas-frequentes">Dúvidas</Link>
+        </li>
+        <li>
           <Link to="/contacts">Contato</Link>
         </li>
         <li>
@@ -122,6 +125,11 @@ const Header = () => {
             <li>
               <Link onClick={changeCloseNavMobile} to="/articles">
                 Artigos
+              </Link>
+            </li>
+            <li>
+              <Link onClick={changeCloseNavMobile} to="/perguntas-frequentes">
+                Perguntas Frequentes
               </Link>
             </li>
             <li>
