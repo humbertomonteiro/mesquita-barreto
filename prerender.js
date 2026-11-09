@@ -21,9 +21,10 @@ try {
 
 // Lê as páginas do sitemap (fonte única: artigo novo no sitemap = página gerada)
 const sitemap = fs.readFileSync(path.join(raiz, "public", "sitemap.xml"), "utf-8");
-const rotasSitemap = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(
-  (m) => new URL(m[1].trim()).pathname
-);
+const locs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1].trim());
+const rotasSitemap = locs.map((loc) => new URL(loc).pathname);
+// Endereço do site (ex.: https://www.mesquitabarretoadvocacia.com.br)
+const SITE = new URL(locs[0]).origin;
 // Páginas fixas do site que não estão no sitemap
 const EXTRAS = ["/work-us", "/be-partner"];
 const rotas = [...new Set([...rotasSitemap, ...EXTRAS])];
@@ -69,6 +70,21 @@ for (const rota of rotas) {
       const limpeza =
         "<script>document.querySelectorAll('[data-pre]').forEach(function(e){e.remove()})</script>";
       html = html.replace("</head>", marcadas.join("") + limpeza + "</head>");
+    }
+    // Página que não define o próprio canônico (nem og:url) não pode herdar
+    // o da home que está no index.html: passa a apontar para si mesma.
+    const enderecoProprio = SITE + rota;
+    if (!tagsHead.some((t) => /rel="canonical"/.test(t))) {
+      const canonico = `<link rel="canonical" href="${enderecoProprio}" />`;
+      html = /<link\s[^>]*rel="canonical"[^>]*>/.test(html)
+        ? html.replace(/<link\s[^>]*rel="canonical"[^>]*>/, () => canonico)
+        : html.replace("</head>", canonico + "</head>");
+    }
+    if (!tagsHead.some((t) => /property="og:url"/.test(t))) {
+      html = html.replace(
+        /<meta\s[^>]*property="og:url"[^>]*>/,
+        () => `<meta property="og:url" content="${enderecoProprio}" />`
+      );
     }
     const DIV_ROOT = /<div id="root">\s*<\/div>/;
     if (!DIV_ROOT.test(html)) throw new Error('<div id="root"></div> não encontrado no index.html');
